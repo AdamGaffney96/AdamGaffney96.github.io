@@ -11,6 +11,8 @@ for (i = 0; i < coll.length; i++) {
         content.style.border = 'none'
       }, 500)
     } else {
+      console.log(content)
+      console.log(content.scrollHeight)
       content.style.maxHeight = content.scrollHeight + "px";
         content.style.border = '#0e387d solid 1px'
     }
@@ -35,7 +37,28 @@ var words = ["This website is a WIP for Adam Gaffney. This is not definitive and
     }
     setInterval("_changeText()", 5000);
 
-// var frmvalidator = new Validator("contactform");
-// frmvalidator.addValidation("name","req","Please provide your name");
-// frmvalidator.addValidation("email","req","Please provide your email");
-// frmvalidator.addValidation("email","email", "Please enter a valid email address");
+let hamburger = document.getElementById('hamburger')
+let ham_nav = document.getElementById('hamburger-nav')
+
+hamburger.addEventListener('click', (e) => {
+    let content = document.getElementById('hamburger-nav');
+    content.style.width = document.getElementsByTagName('main')[0].offsetWidth + "px"
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+})
+
+function getWidth() {
+  return document.documentElement.clientWidth
+}
+
+window.addEventListener('resize', (e) => {
+  if (getWidth() > 804) {
+    ham_nav.style.display = "none"
+  } else {
+    ham_nav.style.display = null
+    ham_nav.style.maxHeight = null;
+  }
+})

@@ -1,10 +1,82 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: linear-gradient(#0e387d, #4f88e4);
-    margin: 0 15%;
+    margin: 0 25%;
     margin-bottom: 20px;
     padding: 10px;
-    min-height: 90.5vh;
+    min-height: 90vh;
+    transition: margin 500ms;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* media queries for body margin resizing */
+@media screen and (max-width: 1700px) {
+    body {
+        margin: 0 23%;
+        transition: margin 500ms;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    body {
+        margin: 0 21%;
+        transition: margin 500ms;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    body {
+        margin: 0 19%;
+        transition: margin 500ms;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    body {
+        margin: 0 17%;
+        transition: margin 500ms;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    body {
+        margin: 0 15%;
+        transition: margin 500ms;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin: 0 13%;
+        transition: margin 500ms;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    body {
+        margin: 0 11%;
+        transition: margin 500ms;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        margin: 0 9%;
+        transition: margin 500ms;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        margin: 0 7%;
+        transition: margin 500ms;
+    }
 }
 
 .intro::-webkit-scrollbar {
@@ -31,7 +103,8 @@ nav {
 }
 
 nav ul {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
@@ -52,11 +125,83 @@ nav li a:hover {
     transition-duration: 300ms;
 }
 
+#hamburger {
+    width: 50px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 4px;
+    cursor: pointer;
+}
+
+#hamburger:hover {
+    background: #1c5abd;
+    border-radius: 4px;
+    transition-duration: 300ms;
+}
+
+#hamburger-nav {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    float: left;
+    background-color: #0e387d;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: max-height 0.3s ease-out;
+}
+
+#hamburger-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#hamburger-nav li {
+    display: flex;
+    width: 100%;
+    flex-wrap: none;
+}
+
+#hamburger-nav li a {
+    color: white;
+    width: 100%;
+    padding: 17px;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.4s;
+}
+
+#hamburger-nav li a:hover {
+    background: #1c5abd;
+    width: 100%;
+    border-radius: 4px;
+    transition-duration: 300ms;
+}
+
+.line {
+    background-color: white;
+    height: 2px;
+    width: 30px;
+    margin: 0 auto;
+    margin-top: 8px;
+    z-index: 9999;
+}
+
+/* media query for hamburger menu */
+@media screen and (max-width: 804px) {
+    nav {
+        display: none;
+    }
+
+    #hamburger {
+        display: inline-block;
+    }
+}
+
 main {
     align-self: center;
-    padding: 50px 5px 0 5px;
+    padding: 20px 5px 0 5px;
     background-color: #bfc9e9;
-    min-height: 90.5vh;
+    min-height: 89vh;
     overflow: scroll;
 }
 
@@ -69,6 +214,13 @@ main {
     margin: 0px;
     margin-right: 5px;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 714px) {
+    .main_figure {
+        float: none;
+        margin: 10px auto;
+    }   
 }
 
 .intro {
@@ -106,7 +258,7 @@ h3 {
 }
 
 .intro th {
-    text-align: right;
+    text-align: left;
 }
 
 .intro td {
@@ -218,14 +370,33 @@ footer {
     z-index: 999;
 }
 
-@media screen and (min-height: 300px) {
+footer p {
+    padding-top: 5px;
+    height: 3vh;
+}
+
+@media screen and (max-width: 720px) {
     footer p {
-        height: 3vh;
+        height: 5vh;
     }
 }
 
-footer p {
-    padding-top: 5px;
+@media screen and (max-width: 378px) {
+    footer p {
+        height: 7vh;
+    }
+}
+
+@media screen and (max-width: 267px) {
+    footer p {
+        height: 9vh;
+    }
+}
+
+@media screen and (max-width: 201px) {
+    footer p {
+        height: 11vh;
+    }
 }
 
 .fadeOut{
