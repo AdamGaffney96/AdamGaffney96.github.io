@@ -187,7 +187,7 @@ nav li a:hover {
 }
 
 /* media query for hamburger menu */
-@media screen and (max-width: 804px) {
+@media screen and (max-width: 804px), screen and (orientation: portrait) {
     nav {
         display: none;
     }
@@ -216,10 +216,13 @@ main {
     margin-top: 10px;
 }
 
-@media screen and (max-width: 714px) {
+@media screen and (max-width: 714px), screen and (orientation: portrait) {
+    main {
+        padding-top: 30px;
+    }
     .main_figure {
         float: none;
-        margin: 10px auto;
+        margin: 0 auto;
     }   
 }
 

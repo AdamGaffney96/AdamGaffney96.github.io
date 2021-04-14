@@ -43,6 +43,7 @@ let ham_nav = document.getElementById('hamburger-nav')
 hamburger.addEventListener('click', (e) => {
     let content = document.getElementById('hamburger-nav');
     content.style.width = document.getElementsByTagName('main')[0].offsetWidth + "px"
+    console.log(content.style.width)
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
@@ -56,9 +57,8 @@ function getWidth() {
 
 window.addEventListener('resize', (e) => {
   if (getWidth() > 804) {
-    ham_nav.style.display = "none"
+    ham_nav.style.maxHeight = null;
   } else {
-    ham_nav.style.display = null
     ham_nav.style.maxHeight = null;
   }
 })
