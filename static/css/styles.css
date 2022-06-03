@@ -1,0 +1,104 @@
+/*
+===================
+ TABLE OF CONTENTS
+===================
+
+1. BASE STYLES
+2. HEADER
+3. MAIN
+*/
+
+
+/*
+===================
+1. BASE STYLES
+===================
+*/
+
+:root {
+    --clr-base: hsl(229 50% 70% / 1);
+    --clr-base-lighter: hsl(229 50% 80% / 1);
+    --clr-base-darker: hsl(229 50% 60% / 1);
+    --clr-dark: hsl(233 11% 30% / 1);
+    --clr-dark-lighter: hsl(233 11% 40% / 1);
+    --clr-dark-darker: hsl(233 11% 20% / 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+
+/*
+===================
+2. HEADER
+===================
+*/
+
+header {
+    max-height: 600px;
+}
+
+
+/* .splash-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+nav {
+    background-color: var(--clr-base);
+    display: grid;
+    place-items: center;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 4em;
+}
+
+nav li {
+    cursor: pointer;
+    position: relative;
+    font-size: 1.5em;
+}
+
+nav li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--clr-dark-darker);
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+}
+
+nav li:hover:after,
+nav li:focus:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/*
+===================
+3. MAIN
+===================
+*/
+
+main {
+    display: grid;
+    gap: 100rem;
+    grid-area: main;
+}
