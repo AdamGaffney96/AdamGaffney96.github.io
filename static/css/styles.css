@@ -4,8 +4,10 @@
 ===================
 
 1. BASE STYLES
-2. HEADER
-3. MAIN
+2. TYPOGRAPHY
+3. LAYOUT
+    3.1. COMPONENTS
+4. MEDIA QUERIES
 */
 
 
@@ -17,11 +19,14 @@
 
 :root {
     --clr-base: hsl(229 50% 70% / 1);
-    --clr-base-lighter: hsl(229 50% 80% / 1);
+    --clr-base-lighter: hsl(229 50% 80% / .8);
     --clr-base-darker: hsl(229 50% 60% / 1);
     --clr-dark: hsl(233 11% 30% / 1);
     --clr-dark-lighter: hsl(233 11% 40% / 1);
     --clr-dark-darker: hsl(233 11% 20% / 1);
+    --clr-dark-shadow: hsl(233 11% 20% / .3);
+    --clr-text-dark: black;
+    --clr-text-light: white;
 }
 
 html {
@@ -31,37 +36,75 @@ html {
 body {
     font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
     display: grid;
-    grid-template-areas: "header" "main" "footer";
+    grid-template-areas: "splash" "nav" "main" "footer";
 }
 
 
 /*
 ===================
-2. HEADER
+2. TYPOGRAPHY
 ===================
 */
 
-header {
-    max-height: 600px;
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    color: var(--clr-dark-darker);
+}
+
+h1 {
+    background-color: var(--clr-base-lighter);
+    display: inline-block;
+    padding: 10px;
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.25em;
 }
 
 
-/* .splash-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
+/*
+===================
+3. LAYOUT
+===================
+*/
+
+
+/* Header */
+
+header {
+    min-height: 500px;
+    max-height: 1000px;
+    grid-area: splash;
+    background-image: url("../img/Developer Splash Image.jpg");
+    background-size: cover;
+    background-position: 50% 0;
+}
+
+
+/* Navigation */
 
 nav {
     background-color: var(--clr-base);
+    grid-area: nav;
     display: grid;
+    max-height: 3em;
     place-items: center;
     position: sticky;
     top: 0;
+    padding: .5em;
+    z-index: 100;
 }
 
 nav ul {
     display: flex;
+    padding: 0;
     gap: 4em;
 }
 
@@ -91,14 +134,161 @@ nav li:focus:after {
 }
 
 
+/* Main */
+
+main {
+    grid-area: main;
+    display: grid;
+    gap: 5rem;
+}
+
+
+/* Articles */
+
+article {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--clr-base-darker);
+    grid-area: footer;
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    color: var(--clr-text-light);
+    font-weight: 600;
+    gap: 1em
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+
 /*
 ===================
-3. MAIN
+3.1. COMPONENTS
 ===================
 */
 
-main {
+
+/* Skip Navigation Button */
+
+.skip-nav-button {
+    border: 2px solid var(--clr-base-darker);
+    background-color: var(--clr-base);
+    box-shadow: 1px 1px 1em 1px var(--clr-dark-shadow);
+    padding: 1em;
+    border-radius: 10px;
+    z-index: 100;
+    position: absolute;
+    top: -1000px;
+}
+
+.skip-nav-button:focus {
+    visibility: visible;
+    top: 0;
+}
+
+
+/* Card styling */
+
+.card {
     display: grid;
-    gap: 100rem;
-    grid-area: main;
+    place-items: center;
+    cursor: pointer;
+    border: 2px solid var(--clr-base-darker);
+    background-color: var(--clr-base);
+    box-shadow: 1px 1px 2em 1px var(--clr-dark-shadow);
+    padding: 1em;
+    transition: transform .2s ease-in-out;
+}
+
+.card-title {
+    font-size: 2em;
+    font-weight: 800;
+    position: relative;
+}
+
+.card-title::after {
+    content: "";
+    width: 80%;
+    background-color: var(--clr-dark-darker);
+    position: absolute;
+    right: -.2em;
+    bottom: 0;
+    height: 2px;
+}
+
+.card:hover,
+.card:focus {
+    transform: scale(1.1);
+}
+
+.card-description {
+    display: none;
+}
+
+
+/* External Links */
+
+.logo {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.source-code {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Code.svg/2560px-Code.svg.png');
+}
+
+.twitter {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg');
+}
+
+.github {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/GitHub_Mark.png');
+}
+
+.youtube {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/30/Youtube_Simgesi.png');
+}
+
+
+/*
+===================
+4. MEDIA QUERIES
+===================
+*/
+
+@media only screen and (min-width: 481px) {
+    /* Base styles */
+    body {
+        grid-template-areas: "splash splash splash" "nav nav nav" ". main . " "footer footer footer";
+    }
+    /* typography */
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    /* layout */
+    article {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .links {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
