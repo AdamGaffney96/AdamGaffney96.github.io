@@ -84,7 +84,8 @@ header {
     grid-area: splash;
     background-image: url("../img/Developer Splash Image.jpg");
     background-size: cover;
-    background-position: 50% 0;
+    background-position: 50% 50%;
+    position: relative;
 }
 
 
@@ -140,6 +141,14 @@ main {
     grid-area: main;
     display: grid;
     gap: 5rem;
+    margin: 0 5px;
+}
+
+
+/* Section Container */
+
+.section-container {
+    padding: 10px;
 }
 
 
@@ -191,12 +200,13 @@ footer {
     border-radius: 10px;
     z-index: 100;
     position: absolute;
-    top: -1000px;
+    left: -1000px;
 }
 
 .skip-nav-button:focus {
     visibility: visible;
-    top: 0;
+    bottom: 10px;
+    left: 0;
 }
 
 
@@ -289,6 +299,6 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
     .links {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
