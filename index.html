@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam Gaffney's Smashing HTML & CSS Cheatsheet</title>
-    <link rel="stylesheet" href="../../../reset.css">
+    <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,7 @@
     </nav>
     <main id="main">
         <div class="display-modal">
+            <div class="modal-close-button">X</div>
             <div class="modal-title">
                 <p>Test 1</p>
             </div>
@@ -54,8 +55,8 @@
                 <h3 tabindex="0">HTML Tags</h3>
                 <article>
                     <div class="card" role="button" tabindex="0">
-                        <div class="content">
-                            <div class="card-title">Headings</div>
+                        <div class="card-title">Headings</div>
+                        <div class="card-content">
                             <div class="card-description">
                                 <p>The specificity of a css property is determined by the selectors used, and determines which properties eventually get applied to an element. Some examples selectors include:</p>
                                 <ol class="bulleted-list">
@@ -65,12 +66,22 @@
                                 </ol>
                                 <p>In the above cases, 1 has the highest specificity as it is selecting for an ID. The next highest is 2 as this uses class selectors, followed by 3 with the lowest specificity as this selects only using html elements.</p>
                             </div>
+                            <div class="card-footnote">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <p>Perspiciatis temporibus possimus molestiae esse?</p>
+                                <p>Quaerat saepe cum molestiae consequuntur.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="card" role="button" tabindex="0">
-                        <div class="content">
-                            <div class="card-title">Selectors</div>
+                        <div class="card-title">Selectors</div>
+                        <div class="card-content">
                             <div class="card-description">This is card 2</div>
+                            <div class="card-footnote">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <p>Perspiciatis temporibus possimus molestiae esse?</p>
+                                <p>Quaerat saepe cum molestiae consequuntur.</p>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -83,8 +94,8 @@
                 <h3 tabindex="0">CSS Concepts</h3>
                 <article>
                     <div class="card" role="button" tabindex="0">
-                        <div class="content">
-                            <div class="card-title">Specificity</div>
+                        <div class="card-title">Specificity</div>
+                        <div class="card-content">
                             <div class="card-description">
                                 <p>The specificity of a css property is determined by the selectors used, and determines which properties eventually get applied to an element. Some examples selectors include:</p>
                                 <ol class="bulleted-list">
@@ -94,12 +105,14 @@
                                 </ol>
                                 <p>In the above cases, 1 has the highest specificity as it is selecting for an ID. The next highest is 2 as this uses class selectors, followed by 3 with the lowest specificity as this selects only using html elements.</p>
                             </div>
+                            <div class="card-footnote"></div>
                         </div>
                     </div>
                     <div class="card" role="button" tabindex="0">
-                        <div class="content">
-                            <div class="card-title">Selectors</div>
+                        <div class="card-title">Selectors</div>
+                        <div class="card-content">
                             <div class="card-description">This is card 2</div>
+                            <div class="card-footnote"></div>
                         </div>
                     </div>
                 </article>
@@ -109,28 +122,31 @@
                 <h3 tabindex="0">CSS Properties</h3>
                 <article>
                     <div class="card" role="button" tabindex="0">
-                        <div class="content">
-                            <div class="card-title">Display</div>
-                            <div class="card-description">This is a description
-                            </div>
+                        <div class="card-title">Display</div>
+                        <div class="card-content">
+                            <div class="card-description">This is a description</div>
+                            <div class="card-footnote"></div>
                         </div>
                     </div>
                     <div class="card" role="button" tabindex="0">
-                        <div class="content">
-                            <div class="card-title">Margin</div>
+                        <div class="card-title">Margin</div>
+                        <div class="card-content">
                             <div class="card-description">This is card 4</div>
+                            <div class="card-footnote"></div>
                         </div>
                     </div>
                     <div class="card" role="button" tabindex="0">
-                        <div class="content">
-                            <div class="card-title">Padding</div>
+                        <div class="card-title">Padding</div>
+                        <div class="card-content">
                             <div class="card-description">This is card 2</div>
+                            <div class="card-footnote"></div>
                         </div>
                     </div>
                     <div class="card" role="button" tabindex="0">
-                        <div class="content">
-                            <div class="card-title">Position</div>
+                        <div class="card-title">Position</div>
+                        <div class="card-content">
                             <div class="card-description">This is card 3</div>
+                            <div class="card-footnote"></div>
                         </div>
                     </div>
                 </article>
