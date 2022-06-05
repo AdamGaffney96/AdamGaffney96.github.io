@@ -29,24 +29,27 @@
     <main id="main">
         <div class="display-modal">
             <div class="modal-close-button">X</div>
-            <div class="modal-title">
-                <p>Test 1</p>
-            </div>
-            <div class="modal-description">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, corporis. Cum distinctio labore autem asperiores, minus quae odit amet reprehenderit. Ab quibusdam doloremque delectus, amet voluptatem tempora laudantium fugiat unde.</p>
-            </div>
-            <div class="modal-footnote">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Tempora aliquam impedit doloribus veniam.</p>
-                <p>Sint recusandae ad tempora voluptas!</p>
-                <p>Corrupti autem at nobis laborum?</p>
-            </div>
-            <div class="modal-tag">
-                <p>HTML Tags</p>
-            </div>
+            <div class="modal-title"></div>
+            <div class="modal-description"></div>
+            <div class="modal-footnote"></div>
+            <div class="modal-tag"></div>
         </div>
         <section id="home-section" class="home-section">
             <h2>About this page</h2>
+            <div class="about-content">
+                <p>
+                    This is my Codecademy project for the HTML & CSS Cheatsheet. I have added multiple sections which split up the different aspects of HTML and CSS.
+                </p>
+                <br>
+                <p>
+                    The buttons above can be used to jump between the different sections, and within each of these sections are subsections with buttons. Clicking or tapping on these buttons will bring up a modal that will give you much more information on whatever was clicked
+                    on. These modals can be closed by using the X in the top right corner or by just clicking anywhere off the modal.
+                </p>
+                <br>
+                <p>
+                    Thank you for visiting, and I hope you can perhaps find this as helpful as I do. I would appreciate anything that you think should be edited or added.
+                </p>
+            </div>
         </section>
         <section id="html-section" class="html-section">
             <h2>HTML</h2>
@@ -54,6 +57,22 @@
             <div class="section-container">
                 <h3 tabindex="0">HTML Tags</h3>
                 <article>
+                    <div class="card" role="button" tabindex="0">
+                        <div class="card-title">The DOM</div>
+                        <div class="card-content">
+                            <div class="card-description">
+                                <p>The Document Object Model (DOM) is the core of the web experience. It is what allows the page to have structure and allows user and developer alike to interact with the webpage. Thanks to the elements of the web document
+                                    being objects, we can access and alter the properties of the web page easily using normal Object Oriented Programming (OOP) style methods.</p>
+                                <br>
+                                <p>For example <strong>document.querySelector()</strong> calls the querySelector method of the document itself, allowing us to fetch elements of the DOM in Javascript. This lets us dynamically access and edit elements of the
+                                    DOM and give more functionality to our webpage.</p>
+                            </div>
+                            <div class="card-footnote">
+                                <p class="footnote-title">More Information</p>
+                                <p>MDN Web Docs about the DOM<sup><a target="_blank" class="footnote-link" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">[1]</a></sup></p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card" role="button" tabindex="0">
                         <div class="card-title">Headings</div>
                         <div class="card-content">
