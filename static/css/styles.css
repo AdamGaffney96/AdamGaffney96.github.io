@@ -7,6 +7,7 @@
 2. TYPOGRAPHY
 3. LAYOUT
     3.1. COMPONENTS
+    3.2. MODIFIERS
 4. MEDIA QUERIES
 */
 
@@ -231,6 +232,14 @@ footer {
     transition: opacity 0.3s linear;
 }
 
+.modal-close-button {
+    font-weight: 800;
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+
 .transition-modal {
     z-index: 100;
 }
@@ -303,7 +312,7 @@ footer {
     transform: scale(1.1);
 }
 
-.card-description {
+.card-content {
     display: none;
 }
 
@@ -332,6 +341,18 @@ footer {
 
 .youtube {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/30/Youtube_Simgesi.png');
+}
+
+
+/*
+===================
+3.1. COMPONENTS
+===================
+*/
+
+.disable-events {
+    pointer-events: none;
+    user-select: none;
 }
 
 
