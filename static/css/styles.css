@@ -255,8 +255,7 @@ footer>p {
     border-radius: 10px;
     position: fixed;
     z-index: -100;
-    width: 95%;
-    max-width: 1000px;
+    width: min(95%, 1000px);
     top: 50%;
     left: 50%;
     display: grid;
@@ -266,6 +265,8 @@ footer>p {
     box-shadow: 0 0 0 5000em var(--clr-dark-shadow);
     transform: translate(-50%, -50%);
     transition: opacity 0.3s linear;
+    max-height: 98vh;
+    overflow-y: auto;
 }
 
 .modal-close-button {
@@ -274,6 +275,7 @@ footer>p {
     right: 5px;
     cursor: pointer;
     z-index: 1;
+    font-size: 2em;
 }
 
 .transition-modal {
@@ -316,6 +318,15 @@ footer>p {
     text-align: right;
 }
 
+.code-block {
+    font-family: monospace;
+    font-size: 1.25em;
+    background-color: var(--clr-base-darker);
+    color: var(--clr-text-alt-fixed);
+    padding: 3px;
+    border-radius: 3px;
+}
+
 
 /* Card styling */
 
@@ -336,6 +347,7 @@ footer>p {
     font-size: 2em;
     font-weight: 800;
     position: relative;
+    white-space: nowrap;
 }
 
 .card-title::after {
@@ -392,7 +404,7 @@ footer>p {
 
 /*
 ===================
-3.1. COMPONENTS
+3.2. MODIFIERS
 ===================
 */
 
